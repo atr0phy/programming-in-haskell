@@ -1,2 +1,2 @@
-(&&&) :: Bool -> Bool -> Bool
-a &&& b = if a then b else False
+(&&) :: Bool -> Bool -> Bool
+a && b = if a then b else False
