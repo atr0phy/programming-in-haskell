@@ -46,3 +46,33 @@ describe (Node a b) = "(Node " ++ (describe a) ++ " " ++ (describe b) ++ ")"
 half :: [a] -> ([a], [a])
 half [] = ([], [])
 half xs = splitAt ((length xs) `div` 2) xs
+
+-- 5
+data Expr = Val Int | Add Expr Expr
+
+expr1 = Add (Add (Val 1) (Val 2)) (Add (Val 3) (Val 4))
+expr2 = Add (Add (Val 4) (Val 4)) (Add (Val 5) (Val 5))
+expr3 = Add (Add (Val 1) (Val 2)) (Val 3)
+
+-- folde id (+) expr1
+
+folde :: (Int -> a) -> (a -> a -> a) -> Expr -> a
+folde f _ (Val n  ) = f n
+folde f g (Add d e) = g (folde f g d) (folde f g e)
+
+-- 6
+eval :: Expr -> Int
+eval = folde id (+)
+
+size :: Expr -> Int
+size = folde (const 1) (+)
+
+-- 7
+-- instance Eq a => Eq (Maybe a) where
+--   Nothing == Nothing = True
+--   Just a  == Just b  = a == b
+
+-- instance Eq a => Eq [a] where
+--   []       == []       = True
+--   (x : xs) == (y : ys) = x == y && xs == ys
+--   xs       == ys       = False
