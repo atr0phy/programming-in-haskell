@@ -1,0 +1,17 @@
+copyright: 2019 Author name here
+maintainer: example@example.com
+dependencies:
+  - random
+  - base >= 4.7 && < 5
+name: programming-in-haskell
+version: 0.1.0.0
+author: atr0phy
+github: atr0phy/programming-in-haskell
+license: BSD3
+executables:
+  tic-toc-toe:
+    source-dirs: chapter11
+    main: TicTocToe.hs
+    ghc-options:
+      - -O2
+description: Please see the README on GitHub at <https://github.com/atr0phy/programming-in-haskell>
