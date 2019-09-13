@@ -8,6 +8,10 @@ version: 0.1.0.0
 author: atr0phy
 github: atr0phy/programming-in-haskell
 license: BSD3
+library:
+  source-dirs: ./
+  exposed-modules:
+    - Chapter12.State
 executables:
   tic-toc-toe:
     source-dirs: chapter11

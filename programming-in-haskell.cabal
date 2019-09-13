@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0c29c420aebe7069576e0071dc49efac5f629c1e14a02d6c993ccbaafcfe4d79
+-- hash: 175a7cf4eccbc0816bec444902607b6343284da1a305a1bb1fa236a356f278df
 
 name:           programming-in-haskell
 version:        0.1.0.0
@@ -20,6 +20,26 @@ build-type:     Simple
 source-repository head
   type: git
   location: https://github.com/atr0phy/programming-in-haskell
+
+library
+  exposed-modules:
+      Chapter12.State
+  other-modules:
+      Chapter12.Expr
+      Chapter12.Inc
+      Chapter12.IO
+      Chapter12.List
+      Chapter12.Maybe
+      Chapter12.MonadTest
+      Chapter12.Pairs
+      Chapter12.Tree
+      Paths_programming_in_haskell
+  hs-source-dirs:
+      ./
+  build-depends:
+      base >=4.7 && <5
+    , random
+  default-language: Haskell2010
 
 executable tic-toc-toe
   main-is: TicTocToe.hs
