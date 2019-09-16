@@ -12,6 +12,7 @@ library:
   source-dirs: ./
   exposed-modules:
     - Chapter12.State
+    - Chapter13.Parser
 executables:
   tic-toc-toe:
     source-dirs: chapter11

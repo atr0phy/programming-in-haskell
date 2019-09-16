@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 175a7cf4eccbc0816bec444902607b6343284da1a305a1bb1fa236a356f278df
+-- hash: 073ceff2689854dc5ecd57579bb42cb00cde4df9161fedb38f016022219abb35
 
 name:           programming-in-haskell
 version:        0.1.0.0
@@ -24,6 +24,7 @@ source-repository head
 library
   exposed-modules:
       Chapter12.State
+      Chapter13.Parser
   other-modules:
       Chapter12.Expr
       Chapter12.Inc
@@ -32,7 +33,9 @@ library
       Chapter12.Maybe
       Chapter12.MonadTest
       Chapter12.Pairs
+      Chapter12.Practice
       Chapter12.Tree
+      Chapter13.Calculator
       Paths_programming_in_haskell
   hs-source-dirs:
       ./
