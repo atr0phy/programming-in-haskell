@@ -164,6 +164,10 @@ expr = do
       symbol "+"
       e <- expr
       return (t + e)
+    <|> do
+          -- "-"
+          e <- expr
+          return (t + e)
     <|> return t
 
 term :: Parser Int
@@ -173,6 +177,10 @@ term = do
       symbol "*"
       t <- term
       return (f * t)
+    <|> do
+          symbol "/"
+          t <- term
+          return (f `div` t)
     <|> return f
 
 factor :: Parser Int
@@ -182,7 +190,7 @@ factor =
       e <- expr
       symbol ")"
       return e
-    <|> natural
+    <|> integer
 
 eval :: String -> Int
 eval xs = case (parse expr xs) of
