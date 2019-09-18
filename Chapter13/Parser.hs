@@ -172,15 +172,24 @@ expr = do
 
 term :: Parser Int
 term = do
-  f <- factor
+  p <- power
   do
       symbol "*"
       t <- term
-      return (f * t)
+      return (p * t)
     <|> do
           symbol "/"
           t <- term
-          return (f `div` t)
+          return (p `div` t)
+    <|> return p
+
+power :: Parser Int
+power = do
+  f <- factor
+  do
+      symbol "^"
+      p <- power
+      return (f ^ p)
     <|> return f
 
 factor :: Parser Int
