@@ -1,3 +1,5 @@
+module Chapter13.Calculator where
+
 import           Chapter13.Parser
 import           System.IO
 
