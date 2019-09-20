@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 17e84771d4a2142a8f2defb07644fbf6242ae304a4ee77f94e56b69060c8a1dc
+-- hash: 799e5d935f4447761028d02e0110382b91eab2c3abe3993b9feb82fae7b3fd98
 
 name:           programming-in-haskell
 version:        0.1.0.0
@@ -41,6 +41,9 @@ library
       Chapter14.Practice
       Chapter14.Traverse
       Chapter14.Tree
+      Chapter15.Practice
+      Chapter15.Primes
+      Chapter15.SumWith
       Paths_programming_in_haskell
   hs-source-dirs:
       ./
