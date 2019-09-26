@@ -1,0 +1,7 @@
+module Chapter4.Third where
+
+third :: [a] -> a
+-- third xs = head (tail (tail xs))
+-- third xs = xs !! 2
+third (_ : _ : x : _) = x
+

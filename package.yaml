@@ -1,5 +1,3 @@
-copyright: 2019 Author name here
-maintainer: example@example.com
 dependencies:
   - random
   - base >= 4.7 && < 5
@@ -7,16 +5,22 @@ name: programming-in-haskell
 version: 0.1.0.0
 author: atr0phy
 github: atr0phy/programming-in-haskell
-license: BSD3
 library:
   source-dirs: ./
   exposed-modules:
+    - Chapter4.LuhnDouble
+    - Chapter5.Count
+    - Chapter5.Find
+    - Chapter5.Lowers
+    - Chapter5.Positions
+    - Chapter6.Halve
+    - Chapter6.Insert
+    - Chapter6.Merge
+    - Chapter7.BinaryConverter
+    - Chapter7.ComparativeMajorityVote
+    - Chapter8.Nat
+    - Chapter10.Hangman
+    - Chapter10.Nim
     - Chapter12.State
     - Chapter13.Parser
-executables:
-  tic-toc-toe:
-    source-dirs: chapter11
-    main: TicTocToe.hs
-    ghc-options:
-      - -O2
 description: Please see the README on GitHub at <https://github.com/atr0phy/programming-in-haskell>
